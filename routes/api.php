@@ -14,4 +14,4 @@ use Illuminate\Http\Response;
 |
 */
 
-Route::get('/deploy/{server}/{project}', 'DeployController@deploy');
+Route::match(['get', 'post'], '/deploy/{server}/{project}', 'DeployController@deploy');
