@@ -36,7 +36,7 @@ class DeployController extends Controller
         \SSH::into($serverName)->run([
             'cd /var/www/' . $project,
             'git fetch --all',
-            'git reset --hard origin/master'
+            'git reset --hard'
         ], function($line) {
             echo $line;
         });
